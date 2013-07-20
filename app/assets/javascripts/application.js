@@ -20,16 +20,19 @@ $(document).ready(function(){
     var p = $(this).parent();
     var tuTask = p.find(".tudu-task");
     var tuTaskT = tuTask.text();
-    var c = "clicked";
 
-    if(!$(this).hasClass(c)) {
-      $(this).addClass(c);
+    if(!$(this).hasClass("clicked")) {
+      $(".tudu-list-task").find(".tudu-edit").removeClass("clicked");
+      $(".tudu-list-task").find(".tudu-edit-input").remove();
+      $(".tudu-list-task").find(".tudu-edit").text("Edit");
+      $(".tudu-list-task").find(".tudu-task").show();
+      $(this).addClass("clicked");
       tuTask.hide();
       tuTask.after('<input value="'+tuTaskT+'" class="tudu-edit-input"></input>');
       $(this).text("Update");
     }
     else {
-      $(this).removeClass(c);
+      $(this).removeClass("clicked");
       tuTask.show();
       p.find(".tudu-edit-input").remove();
       $(this).text("Edit");
