@@ -2,8 +2,10 @@
 <%= link_to "+", new_list_path, :class => "new-tudu" %>
 <ul>
   <% @lists.each do |list| %>
-    <li class="priority-<%= list.priority.downcase %>">
-      <%= list.task %> | <span><%= list.priority %></span>
+    <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %>">
+      <%= link_to list_path(list) do %>
+        <%= list.task %> | <span><%= list.priority %></span>
+      <% end %>
     </li>
   <% end %>
 </ul>
