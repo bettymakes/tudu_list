@@ -19,7 +19,6 @@ $(document).ready(function(){
   $(".tudu-edit").on("click", function(){
     var p = $(this).parent();
     var tuTask = p.find(".tudu-task");
-    var tuTaskT = tuTask.text();
 
     if(!$(this).hasClass("clicked")) {
       $(".tudu-list-task").find(".tudu-edit").removeClass("clicked");
@@ -29,7 +28,7 @@ $(document).ready(function(){
       $(".tudu-list-task").find(".update-cancel").remove();
       $(this).addClass("clicked");
       tuTask.hide();
-      tuTask.after('<input value="'+tuTaskT+'" class="tudu-edit-input"></input>');
+      tuTask.after('<input value="'+tuTask.text()+'" class="tudu-edit-input"></input>');
       $(this).text("Update ");
       $(this).after('<span class="update-cancel"> | <span class="update-cancel-click">Cancel</span></span>');
     }
@@ -40,6 +39,15 @@ $(document).ready(function(){
       $(this).text("Edit");
       $(".tudu-list-task").find(".update-cancel").remove();
     }
+
+    $(".update-cancel-click").on("click", function(){
+      $(this).removeClass("clicked");
+      $(this).parent().find(".tudu-task").show();
+      $(".tudu-edit").text("Edit");
+      $(".tudu-list-task").find(".update-cancel").remove();
+
+
+    });
 
 
 
