@@ -8,10 +8,11 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(params[:list])
+    @list = List.new(list_params)
     if @list.save 
-      redirect_to lists_path
+      redirect_to lists_path, :notice => "Task Added!"
     else
+      flash.now.alert = "Try Again."
       render :new
     end
   end
@@ -28,5 +29,12 @@ class ListsController < ApplicationController
   def destroy
   end
 
-end
+  private
+    def list_params
+      params.require(:list).permit(
+        :task,
+        :priority
+      )
+    end
 
+end
