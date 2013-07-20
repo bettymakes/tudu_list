@@ -5,7 +5,8 @@
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %>">
       <%= link_to list_path(list) do %>
         <%= list.task %> | <span><%= list.priority %></span>
-      <% end %>
+      <% end %> |
+      <%= link_to "Edit", edit_list_path(list) %>
     </li>
   <% end %>
 </ul>
