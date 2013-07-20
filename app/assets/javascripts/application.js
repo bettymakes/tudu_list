@@ -24,13 +24,18 @@ $(document).ready(function(){
 
     if(!$(this).hasClass(c)) {
       $(this).addClass(c);
+      tuTask.hide();
+      tuTask.after('<input value="'+tuTaskT+'" class="tudu-edit-input"></input>');
+      $(this).text("Update");
     }
     else {
       $(this).removeClass(c);
+      tuTask.show();
+      p.find(".tudu-edit-input").remove();
+      $(this).text("Edit");
     }
 
 
-    tuTask.hide();
-    tuTask.after('<input value="'+tuTaskT+'"></input>');
+
   });
 });
