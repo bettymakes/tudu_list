@@ -1,1 +1,8 @@
 <h3>Index</h3>
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= list.task %> | <%= list.priority %>
+    </li>
+  <% end %>
+</ul>
