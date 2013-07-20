@@ -3,10 +3,9 @@
 <ul>
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %>">
-      <%= link_to list_path(list) do %>
-        <%= list.task %> | <span><%= list.priority %></span>
-      <% end %> |
-      <%= link_to "Edit", edit_list_path(list) %> |
+        <span class="tudu-task"><%= list.task %></span>| 
+        <span><%= list.priority %></span> |
+      <span class="tudu-edit">Edit</span> |
       <%= link_to 'Delete', list, :method => :delete %>
     </li>
   <% end %>

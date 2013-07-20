@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $(".tudu-edit").on("click", function(){
+    var tuTask = p.find(".tudu-task");
+    var tuTaskT = tuTask.text();
+    tuTask.hide();
+    tuTask.after('<input value="'+tuTaskT+'"></input>');
+  });
+});
