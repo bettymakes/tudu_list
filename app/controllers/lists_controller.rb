@@ -23,11 +23,6 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
-    if @list.save
-      redirect_to list_path(@list)
-    else
-      render :new
-    end
   end
 
   def update
