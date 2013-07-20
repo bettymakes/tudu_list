@@ -1,7 +1,7 @@
 <h3>Index</h3>
 <ul>
   <% @lists.each do |list| %>
-    <li class="priority-<%= list.priority %>">
+    <li class="priority-<%= list.priority.downcase %>">
       <%= list.task %> | <span><%= list.priority %></span>
     </li>
   <% end %>
