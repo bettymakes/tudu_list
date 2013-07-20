@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130720022501) do
+ActiveRecord::Schema.define(version: 20130720024243) do
 
   create_table "lists", force: true do |t|
     t.string   "task"
-    t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "priority"
   end
 
 end
