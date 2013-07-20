@@ -4,6 +4,8 @@
   <%= f.text_field :task %>
 
   <%= f.label :priority %>
-  <%= f.number_field :priority %>
+  <%= f.select :priority, List::PRIORITY %>
+
+  <%= f.submit "Create TuDu" %>
 
 <% end %>

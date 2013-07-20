@@ -1,4 +1,4 @@
 class List < ActiveRecord::Base
-  PRIORITY = ['High', 'Medium', 'Low', 'None']
+  PRIORITY = [ 'None', 'High', 'Medium', 'Low']
 end
 
