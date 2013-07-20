@@ -42,10 +42,10 @@ $(document).ready(function(){
 
     $(".update-cancel-click").on("click", function(){
       $(this).removeClass("clicked");
-      $(this).parent().find(".tudu-task").show();
-      $(".tudu-edit").text("Edit");
+      tuTask.show();
+      p.find(".tudu-edit-input").remove();
+      $(this).text("Edit");
       $(".tudu-list-task").find(".update-cancel").remove();
-
 
     });
 

@@ -7,6 +7,11 @@
         <span><%= list.priority %></span> |
       <span class="tudu-edit">Edit</span> |
       <%= link_to 'Delete', list, :method => :delete %>
+
+      <%= form_for list, :remote => true do |f| %>
+        <%= f.text_field :task %>
+        <%= f.submit "Update" %>
+      <% end %>
     </li>
   <% end %>
 </ul>
