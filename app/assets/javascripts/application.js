@@ -17,8 +17,19 @@
 
 $(document).ready(function(){
   $(".tudu-edit").on("click", function(){
+    var p = $(this).parent();
     var tuTask = p.find(".tudu-task");
     var tuTaskT = tuTask.text();
+    var c = "clicked";
+
+    if(!$(this).hasClass(c)) {
+      $(this).addClass(c);
+    }
+    else {
+      $(this).removeClass(c);
+    }
+
+
     tuTask.hide();
     tuTask.after('<input value="'+tuTaskT+'"></input>');
   });
