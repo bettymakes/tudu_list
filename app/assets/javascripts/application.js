@@ -26,16 +26,19 @@ $(document).ready(function(){
       $(".tudu-list-task").find(".tudu-edit-input").remove();
       $(".tudu-list-task").find(".tudu-edit").text("Edit");
       $(".tudu-list-task").find(".tudu-task").show();
+      $(".tudu-list-task").find(".update-cancel").remove();
       $(this).addClass("clicked");
       tuTask.hide();
       tuTask.after('<input value="'+tuTaskT+'" class="tudu-edit-input"></input>');
-      $(this).text("Update");
+      $(this).text("Update ");
+      $(this).after('<span class="update-cancel"> | <span class="update-cancel-click">Cancel</span></span>');
     }
     else {
       $(this).removeClass("clicked");
       tuTask.show();
       p.find(".tudu-edit-input").remove();
       $(this).text("Edit");
+      $(".tudu-list-task").find(".update-cancel").remove();
     }
 
 
