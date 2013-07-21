@@ -11,8 +11,8 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save 
-    render nothing: true
-      # redirect_to lists_path, :notice => "Task Added!"
+    # render nothing: true
+    redirect_to lists_path #, :notice => "Task Added!"
     # else
     #   flash.now.alert = "Try Again."
     #   render :new
@@ -30,7 +30,8 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update_attributes(list_params)
-    render nothing: true
+    # render nothing: true
+    redirect_to lists_path
     # else
     #   render nothing: true
     # end
@@ -39,7 +40,7 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
     @list.destroy
-    redirect_to lists_path
+    render nothing:true
   end
 
   private
