@@ -29,9 +29,9 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update_attributes(list_params)
-    #   redirect_to lists_path
+    render nothing: true
     # else
-    #   render :new
+    #   render nothing: true
     # end
   end
 
