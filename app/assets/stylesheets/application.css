@@ -20,3 +20,12 @@
  li {
   display: inline-block;
  }
+
+.tudu-list li.tudu-list-task {
+  border-bottom: 1px dotted #ccc;
+  display: block;
+}
+
+.tudu-task-options li {
+  margin-right: 50px;
+}
