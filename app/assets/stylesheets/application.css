@@ -34,4 +34,5 @@
 
 .tudu-task-options li {
   margin-right: 50px;
+  cursor: pointer;
 }
