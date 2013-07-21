@@ -21,6 +21,8 @@ $(document).ready(function(){
     if(!$(this).parent().parent().hasClass("edit-mode")){
       $(this).parent().parent().addClass("edit-mode");
       $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
+      $(this).addClass("hidden");
+      $(this).parent().parent().find(".tudu-task").addClass("hidden");
       console.log("clicked")
     }
     else{
