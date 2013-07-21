@@ -17,22 +17,14 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save 
-    # render nothing: true
-    redirect_to lists_path #, :notice => "Task Added!"
-    # else
-    #   flash.now.alert = "Try Again."
-    #   render :new
-    # end
+    respond_to do |format|
+      #format.html # don't need this html, causes 500 error (looks for non-existant template)
+      format.json { render json: @list }
+    end
   end
 
   def show
     @list = List.find(params[:id])
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @lists }
-    end
-    
   end
 
   def edit
@@ -42,8 +34,8 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update_attributes(list_params)
-    # render nothing: true
-    redirect_to lists_path
+    render nothing: true
+    # redirect_to lists_path
     # else
     #   render nothing: true
     # end
@@ -62,7 +54,5 @@ class ListsController < ApplicationController
         :priority
       )
     end
-
-
 
 end
