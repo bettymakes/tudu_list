@@ -67,6 +67,12 @@ $(document).ready(function(){
     $(this).parent().parent().remove();
     }, 350);
   });
+
+  //TuDu Adding New Task
+  $("#new-list").bind("ajax:complete", function(){
+
+
+  });
 });
 
 
