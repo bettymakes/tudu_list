@@ -1,5 +1,17 @@
-<h3>Show</h3>
-<div>
-  <div> Task: <%= @list.task %> </div>
-  <div> Priority: <%= @list.priority %> </div>
-</div>
+<ul class="tudu-list">
+    <li class="priority-<%= @list.priority.downcase %> tudu-id-<%= @list.id %> tudu-list-task">
+      <div class="tudu-task"><%= @list.task %></div>
+      <div class="tudu-edit-form hidden">
+        <%= form_for @list, :remote => true do |f| %>
+          <%= f.text_field :task, :class => "tudu-edit-input" %>
+        <% end %>
+      </div>
+
+      <ul class="tudu-task-options">
+        <li class="tudu-edit">Edit</li>
+        <li class="tudu-update hidden">Update</li>
+        <li class="tudu-edit-cancel hidden">Cancel</li>
+        <li class="tudu-delete"><%= link_to 'Delete', @list, :method => :delete, :remote => true %></li>
+      </ul>
+    </li>
+</ul>
