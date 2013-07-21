@@ -1,17 +1,23 @@
 <h3>Index</h3>
-<%= link_to "+", new_list_path, :class => "new-tudu" %>
-<ul>
+<%= link_to "+ New TuDu", new_list_path, :class => "new-tudu-btn" %>
+<br>
+<br>
+<ul class="tudu-list">
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %> tudu-list-task">
-        <span class="tudu-task"><%= list.task %></span>| 
-        <span><%= list.priority %></span> |
-      <span class="tudu-edit">Edit</span> |
-      <%= link_to 'Delete', list, :method => :delete %>
+      <div class="tudu-task"><%= list.task %></div>
+      <div class="tudu-edit-form">
+        <%= form_for list, :remote => true do |f| %>
+          <%= f.text_field :task, :class => "tudu-edit-input" %>
+        <% end %>
+      </div>
 
-      <%= form_for list, :remote => true do |f| %>
-        <%= f.text_field :task %>
-        <%= f.submit "Update" %>
-      <% end %>
+      <ul class="tudu-task-options">
+        <li class="tudu-edit">Edit</li>
+        <li class="tudu-update">Update</li>
+        <li class="tudu-edit-cancel">Cancel</li>
+        <li class="tudu-delete"><%= link_to 'Delete', list, :method => :delete %></li>
+      </ul>
     </li>
   <% end %>
 </ul>
