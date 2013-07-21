@@ -70,7 +70,10 @@ $(document).ready(function(){
 
   //TuDu Adding New Task
   $("#new-list").bind("ajax:complete", function(){
+    var url = "lists/json";
+    $.getJSON(url, function(data){
 
+    });
 
   });
 });
