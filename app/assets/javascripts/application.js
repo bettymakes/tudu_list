@@ -70,9 +70,16 @@ $(document).ready(function(){
 
   //TuDu Adding New Task
   $("#new-list").bind("ajax:complete", function(){
-    var url = "lists/json";
-    $.getJSON(url, function(data){
-
+    var jsonUrl = "lists/json";
+    // Getting JSON to get the id of the newest task added
+      $.getJSON(jsonUrl, function(data){
+      $.ajax({
+        url: "/lists/"+data[0].id,
+        context: document.body,
+        success: function(ajaxDataDocBody) {
+          $(".tudu-list").prepend($(ajaxDataDocBody).find(".tudu-list-task"));
+        }
+      });
     });
 
   });
