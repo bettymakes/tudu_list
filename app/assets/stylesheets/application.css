@@ -21,6 +21,10 @@
   display: inline-block;
  }
 
+.hidden {
+  display: none !important;
+}
+
 .tudu-list li.tudu-list-task {
   border-bottom: 1px dotted #ccc;
   display: block;
