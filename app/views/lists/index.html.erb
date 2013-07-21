@@ -1,6 +1,6 @@
 <h3>Index</h3>
 
-<%= form_for @list do |f| %>
+<%= form_for @list, :remote => true do |f| %>
   <%= f.label :task %>
   <%= f.text_field :task %>
 
