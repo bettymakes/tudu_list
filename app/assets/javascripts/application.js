@@ -41,6 +41,7 @@ $(document).ready(function(){
     $(this).siblings(".tudu-update").addClass("hidden");
     $(this).siblings(".tudu-edit").removeClass("hidden");
     $(this).parent().parent().removeClass("edit-mode");
+    $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
   });
 
 });
