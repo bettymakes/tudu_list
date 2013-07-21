@@ -49,7 +49,7 @@ $(document).ready(function(){
 
   //Update Button Action
   $(".tudu-update").on("click", function(){
-
+    $(this).parent().parent().find(".tudu-edit-input").submit();
     console.log("update clicked")
   });
 
