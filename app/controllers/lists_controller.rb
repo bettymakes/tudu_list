@@ -2,6 +2,12 @@ class ListsController < ApplicationController
   def index
     @lists = List.all.reverse
     @list = List.new
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @lists }
+    end
+
   end
 
   def new
@@ -21,6 +27,12 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @lists }
+    end
+    
   end
 
   def edit
@@ -50,5 +62,7 @@ class ListsController < ApplicationController
         :priority
       )
     end
+
+
 
 end
