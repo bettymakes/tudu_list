@@ -1,5 +1,15 @@
 <h3>Index</h3>
 <%= link_to "+ New TuDu", new_list_path, :class => "new-tudu-btn" %>
+
+<%= form_for @list do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+
+  <%= f.label :priority %>
+  <%= f.select :priority, List::PRIORITY %>
+
+  <%= f.submit "Create TuDu" %>
+<% end %>
 <br>
 <br>
 <ul class="tudu-list">
