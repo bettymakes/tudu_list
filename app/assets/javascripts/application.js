@@ -23,6 +23,7 @@ $(document).ready(function(){
       $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
       $(this).addClass("hidden");
       $(this).parent().parent().find(".tudu-task").addClass("hidden");
+      $(this).parent().parent().find(".tudu-edit-form").removeClass("hidden");
       console.log("clicked")
     }
     else{
