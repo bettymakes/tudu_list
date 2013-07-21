@@ -1,5 +1,4 @@
 <h3>Index</h3>
-<%= link_to "+ New TuDu", new_list_path, :class => "new-tudu-btn" %>
 
 <%= form_for @list do |f| %>
   <%= f.label :task %>
@@ -12,6 +11,7 @@
 <% end %>
 <br>
 <br>
+<hr>
 <ul class="tudu-list">
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %> tudu-list-task">
