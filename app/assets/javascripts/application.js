@@ -50,6 +50,7 @@ $(document).ready(function(){
   //Update Button Action
   $(".tudu-update").on("click", function(){
     $(this).parent().parent().find(".tudu-edit-input").submit();
+    $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
     console.log("update clicked")
   });
 
