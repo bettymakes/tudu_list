@@ -18,7 +18,14 @@
 $(document).ready(function(){
 
   $(".tudu-edit").on("click", function(){
-
+    if(!$(this).parent().parent().hasClass("edit-mode")){
+      $(this).parent().parent().addClass("edit-mode");
+      console.log("clicked")
+    }
+    else{
+      $(this).parent().parent().removeClass("edit-mode");
+      console.log("removed")
+    }
   });
-  
+
 });
