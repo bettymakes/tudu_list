@@ -17,4 +17,8 @@
 
 $(document).ready(function(){
 
+  $(".tudu-edit").on("click", function(){
+
+  });
+  
 });
