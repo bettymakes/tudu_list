@@ -17,6 +17,8 @@
 
 $(document).ready(function(){
 
+//TuDu Edit Task Function
+  //Edit Button Action
   $(".tudu-edit").on("click", function(){
     if(!$(this).parent().parent().hasClass("edit-mode")){
       $(this).parent().parent().addClass("edit-mode");
@@ -32,4 +34,21 @@ $(document).ready(function(){
     }
   });
 
+
+  //Cancel Button Action
+  $(".tudu-edit-cancel").on("click", function(){
+    $(this).addClass("hidden");
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
