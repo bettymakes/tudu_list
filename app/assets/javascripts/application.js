@@ -20,6 +20,7 @@ $(document).ready(function(){
   $(".tudu-edit").on("click", function(){
     if(!$(this).parent().parent().hasClass("edit-mode")){
       $(this).parent().parent().addClass("edit-mode");
+      $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
       console.log("clicked")
     }
     else{
