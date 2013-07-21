@@ -40,6 +40,7 @@ $(document).ready(function(){
     $(this).addClass("hidden");
     $(this).siblings(".tudu-update").addClass("hidden");
     $(this).siblings(".tudu-edit").removeClass("hidden");
+    $(this).parent().parent().removeClass("edit-mode");
   });
 
 });
