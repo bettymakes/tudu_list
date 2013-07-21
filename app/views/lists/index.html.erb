@@ -6,7 +6,7 @@
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %> tudu-list-task">
       <div class="tudu-task"><%= list.task %></div>
-      <div class="tudu-edit-form">
+      <div class="tudu-edit-form hidden">
         <%= form_for list, :remote => true do |f| %>
           <%= f.text_field :task, :class => "tudu-edit-input" %>
         <% end %>
@@ -14,8 +14,8 @@
 
       <ul class="tudu-task-options">
         <li class="tudu-edit">Edit</li>
-        <li class="tudu-update">Update</li>
-        <li class="tudu-edit-cancel">Cancel</li>
+        <li class="tudu-update hidden">Update</li>
+        <li class="tudu-edit-cancel hidden">Cancel</li>
         <li class="tudu-delete"><%= link_to 'Delete', list, :method => :delete %></li>
       </ul>
     </li>
