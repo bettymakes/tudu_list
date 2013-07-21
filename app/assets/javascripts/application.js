@@ -39,6 +39,7 @@ $(document).ready(function(){
   $(".tudu-edit-cancel").on("click", function(){
     $(this).addClass("hidden");
     $(this).siblings(".tudu-update").addClass("hidden");
+    $(this).siblings(".tudu-edit").removeClass("hidden");
   });
 
 });
