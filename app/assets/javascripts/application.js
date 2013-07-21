@@ -54,6 +54,7 @@ $(document).ready(function(){
     $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
     $(this).parent().parent().find(".tudu-task").removeClass("hidden");
     $(this).addClass("hidden");
+    $(this).siblings(".tudu-edit").removeClass("hidden");
 
     console.log("update clicked")
   });
