@@ -18,7 +18,7 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
     @list.save 
     respond_to do |format|
-      #format.html # don't need this html, causes 500 error (looks for non-existant template)
+      #format.html ... don't need this html, causes 500 error (looks for non-existant template)
       format.json { render json: @list }
     end
   end
