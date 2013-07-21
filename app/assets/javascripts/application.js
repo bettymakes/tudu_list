@@ -60,7 +60,13 @@ $(document).ready(function(){
     console.log("update clicked")
   });
 
-
+  //Delete Button Action
+  $(".tudu-delete").on("click", function(){
+    $(this).parent().parent().fadeOut(300);
+    setTimeout(function(){
+    $(this).parent().parent().remove();
+    }, 350);
+  });
 });
 
 
