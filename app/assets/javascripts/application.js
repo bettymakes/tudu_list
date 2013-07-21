@@ -52,6 +52,7 @@ $(document).ready(function(){
     $(this).parent().parent().find(".tudu-edit-input").submit();
     $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
     $(this).parent().parent().find(".tudu-task").removeClass("hidden");
+    $(this).parent().parent().find(".tudu-task").text($(this).parent().parent().find(".tudu-edit-input").val());
     console.log("update clicked")
   });
 
