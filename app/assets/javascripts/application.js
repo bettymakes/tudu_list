@@ -38,6 +38,7 @@ $(document).ready(function(){
   //Cancel Button Action
   $(".tudu-edit-cancel").on("click", function(){
     $(this).addClass("hidden");
+    $(this).siblings(".tudu-update").addClass("hidden");
   });
 
 });
