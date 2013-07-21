@@ -69,10 +69,11 @@ $(document).ready(function(){
   });
 
   //TuDu Adding New Task
-  $("#new-list").bind("ajax:complete", function(){
-    var jsonUrl = "lists/json";
+  $("#new_list").bind("ajax:complete", function(){
+    var jsonUrl = "/lists.json";
     // Getting JSON to get the id of the newest task added
       $.getJSON(jsonUrl, function(data){
+        console.log(data[0].id);
       $.ajax({
         url: "/lists/"+data[0].id,
         context: document.body,
