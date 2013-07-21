@@ -42,7 +42,17 @@ $(document).ready(function(){
     $(this).siblings(".tudu-edit").removeClass("hidden");
     $(this).parent().parent().removeClass("edit-mode");
     $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
+    $(this).parent().parent().find(".tudu-task").removeClass("hidden");
+    console.log("cancel clicked")
   });
+
+
+  //Update Button Action
+  $(".tudu-update").on("click", function(){
+
+    console.log("update clicked")
+  });
+
 
 });
 
