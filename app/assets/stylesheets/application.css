@@ -96,13 +96,24 @@
   }
 
   .tudu-task-options {
+    overflow: hidden;
     float: right;
     padding: 20px;
   }
 
   .tudu-task-options li {
     cursor: pointer;
-    margin-right: 50px;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    line-height: 1;
+    float: left;
+  }
+
+  .tudu-task-options li:last-child{
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
   }
 
   .tudu-task, .tudu-edit-input {
@@ -133,5 +144,3 @@
   .tudu-task-options li a{
     text-decoration: none;
   }
-
-
