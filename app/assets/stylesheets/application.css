@@ -27,6 +27,15 @@
   background-color: #f2f2f2;
  }
 
+.main-header {
+  height: 50px;
+  width: 100%;
+  background-color: #7FFFD4;
+  padding: 0;
+  margin: 0;
+}
+
+
  ul {
   margin: 0;
   padding: 0;
