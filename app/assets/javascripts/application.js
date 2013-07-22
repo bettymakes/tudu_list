@@ -85,7 +85,9 @@ EditingTasks();
         url: "/lists/"+data[0].id,
         context: document.body,
         success: function(ajaxDataDocBody) {
-          $(".tudu-list").prepend($(ajaxDataDocBody).find(".tudu-list-task"));
+          var item = $(ajaxDataDocBody).find(".tudu-list-task");
+          $(".tudu-list").prepend(item);
+          item.find(".tudu-task").hide().fadeIn(500);
           EditingTasks();
         }
       });
