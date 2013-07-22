@@ -175,5 +175,9 @@
     font-weight: bold;
   }
 
+  .priority-high {
+    box-shadow: 3px 0px 0px orangered inset;
+  }
+
 
 
