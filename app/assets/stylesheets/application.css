@@ -83,6 +83,7 @@
 
   .tudu-task-container {
     float: left;
+    max-width: 90%;
   }
 
   .tudu-list li.tudu-list-task {
@@ -155,6 +156,7 @@
 
   .edit-mode .tudu-task-container {
     float: none;
+    max-width: 100%;
   }
 
   .edit-mode .tudu-task-options {
@@ -170,6 +172,7 @@
     border-bottom: 1px dashed #ccc;
     margin-bottom: 10px;
     background: none;
+    font-weight: bold;
   }
 
 
