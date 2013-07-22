@@ -49,6 +49,10 @@
   text-transform: uppercase;
 }
 
+.main-container {
+  margin-top: 50px;
+}
+
  ul {
   margin: 0;
   padding: 0;
