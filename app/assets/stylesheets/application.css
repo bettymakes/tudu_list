@@ -23,6 +23,10 @@
   -webkit-font-smoothing: antialiased;
  }
 
+ body {
+  color: #f2f2f2;
+ }
+
  ul {
   margin: 0;
   padding: 0;
