@@ -12,6 +12,12 @@
  *= require_tree .
  */
 
+ html, body {
+  font-family: 'Open-Sans', 'Helvetica', 'Arial', 'Sans-serif';
+  font-size: 14px;
+  line-height: 21px;
+ }
+
  ul {
   margin: 0;
   padding: 0;
@@ -33,6 +39,7 @@
 }
 
 .tudu-task-options li {
-  margin-right: 50px;
   cursor: pointer;
+  margin-right: 50px;
 }
+
