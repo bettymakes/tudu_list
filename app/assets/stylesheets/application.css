@@ -41,6 +41,9 @@
     display: none !important;
   }
 
+  .clear {
+    clear: both;
+  }
 
 /* THE HEADER */
   .main-header {
@@ -78,6 +81,10 @@
     background-color: white;
   }
 
+  .tudu-task-container {
+    float: left;
+  }
+
   .tudu-list li.tudu-list-task {
     border-bottom: 1px solid #eee;
     display: block;
@@ -85,8 +92,14 @@
     padding-bottom: 20px;
   }
 
+  .tudu-task-options {
+    float: right;
+  }
+
   .tudu-task-options li {
     cursor: pointer;
     margin-right: 50px;
   }
+
+
 
