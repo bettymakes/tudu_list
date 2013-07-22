@@ -91,6 +91,10 @@
     display: block;
   }
 
+  .tudu-list li.tudu-list-task:hover{
+    box-shadow: 3px 0px 0px #bbb inset;
+  }
+
   .tudu-task-options {
     float: right;
     padding: 20px;
