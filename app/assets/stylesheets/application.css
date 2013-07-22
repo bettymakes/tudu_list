@@ -33,6 +33,9 @@
   background-color: #7FFFD4;
   padding: 0;
   margin: 0;
+  position: fixed;
+  top: 0px;
+  z-index: 999999;
 }
 
 
