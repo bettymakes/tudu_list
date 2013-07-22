@@ -83,17 +83,17 @@
 
   .tudu-task-container {
     float: left;
+    padding: 20px;
   }
 
   .tudu-list li.tudu-list-task {
     border-bottom: 1px solid #eee;
     display: block;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
   }
 
   .tudu-task-options {
     float: right;
+    padding: 20px;
   }
 
   .tudu-task-options li {
