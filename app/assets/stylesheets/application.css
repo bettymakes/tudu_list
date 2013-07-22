@@ -153,8 +153,9 @@
     box-shadow: 3px 0px 0px #6be0b9 inset;
   }
 
-
-
+  .tudu-edit-input {
+    border: none;
+  }
 
 
 
