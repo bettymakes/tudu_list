@@ -30,10 +30,10 @@ var EditingTasks = function(){
       $(this).parent().parent().find(".tudu-edit-form").removeClass("hidden");
       console.log("clicked")
     }
-    else{
-      $(this).parent().parent().removeClass("edit-mode");
-      console.log("removed")
-    }
+    // else{
+    //   $(this).parent().parent().removeClass("edit-mode");
+    //   console.log("removed")
+    // }
   });
 
 
