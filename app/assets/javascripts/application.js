@@ -55,6 +55,7 @@ var EditingTasks = function(){
     $(this).parent().parent().find(".tudu-task").text($(this).parent().parent().find(".tudu-edit-input").val());
     $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
     $(this).parent().parent().find(".tudu-task").removeClass("hidden");
+    $(this).parent().parent().find(".tudu-task").hide().fadeIn(500);
     $(this).addClass("hidden");
     $(this).siblings(".tudu-edit-cancel").addClass("hidden");
     $(this).siblings(".tudu-edit").removeClass("hidden");
