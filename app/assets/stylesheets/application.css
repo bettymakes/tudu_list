@@ -144,3 +144,22 @@
   .tudu-task-options li a{
     text-decoration: none;
   }
+
+  .tudu-task-options li:hover, .tudu-task-options li a:hover{
+    color: #6be0b9;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
