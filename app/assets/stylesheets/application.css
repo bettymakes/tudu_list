@@ -79,7 +79,7 @@
   }
 
   .tudu-list li.tudu-list-task {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px solid #eee;
     display: block;
     margin-bottom: 20px;
     padding-bottom: 20px;
