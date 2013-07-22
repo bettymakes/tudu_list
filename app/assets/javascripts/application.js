@@ -17,6 +17,8 @@
 
 $(document).ready(function(){
 
+var EditingTasks = function(){
+
 //TuDu Edit Task Function
   //Edit Button Action
   $(".tudu-edit").on("click", function(){
@@ -67,6 +69,9 @@ $(document).ready(function(){
     $(this).parent().parent().remove();
     }, 350);
   });
+}
+
+EditingTasks();
 
   //TuDu Adding New Task
   $("#new_list").bind("ajax:complete", function(){
@@ -79,6 +84,7 @@ $(document).ready(function(){
         context: document.body,
         success: function(ajaxDataDocBody) {
           $(".tudu-list").prepend($(ajaxDataDocBody).find(".tudu-list-task"));
+          EditingTasks();
         }
       });
     });
