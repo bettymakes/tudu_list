@@ -49,7 +49,7 @@
   .main-header {
     height: 50px;
     width: 100%;
-    background-color: #7FFFD4;
+    background-color: #6be0b9;
     padding: 0;
     margin: 0;
     position: fixed;
@@ -99,6 +99,12 @@
   .tudu-task-options li {
     cursor: pointer;
     margin-right: 50px;
+  }
+
+  .tudu-task, .tudu-edit-input {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.2em;
   }
 
 
