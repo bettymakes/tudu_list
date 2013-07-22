@@ -153,9 +153,20 @@
     box-shadow: 3px 0px 0px #6be0b9 inset;
   }
 
+  .edit-mode .tudu-task-container {
+    float: none;
+  }
+
+  .edit-mode .tudu-task-options {
+    float: left;
+    display: block;
+  }
+
   .tudu-edit-input {
     border: none;
     outline: none;
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
   }
 
 
