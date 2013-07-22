@@ -149,14 +149,9 @@
     color: #6be0b9;
   }
 
-
-
-
-
-
-
-
-
+  .tudu-list li.tudu-list-task.edit-mode {
+    box-shadow: 3px 0px 0px #6be0b9 inset;
+  }
 
 
 
