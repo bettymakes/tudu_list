@@ -123,3 +123,15 @@
     display: block;
   }
 
+  .tudu-task-options li, .tudu-task-options li a{
+    font-size: 11px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+  }
+
+  .tudu-task-options li a{
+    text-decoration: none;
+  }
+
+
