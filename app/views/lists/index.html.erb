@@ -8,8 +8,8 @@
   <%= f.submit "Create TuDu", :class => "tudu-create-new-btn" %>
 <% end %>
 <br>
-<br>
 <hr>
+<br>
 <ul class="tudu-list">
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %> tudu-list-task">
