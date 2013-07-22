@@ -111,5 +111,9 @@
     line-height: 1.2em;
   }
 
+  .tudu-list-task:hover .tudu-task{
+    color: black;
+  }
+
 
 
