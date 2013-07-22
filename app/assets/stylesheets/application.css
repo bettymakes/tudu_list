@@ -115,5 +115,11 @@
     color: black;
   }
 
+  .tudu-task-options{
+    display: none;
+  }
 
+  .tudu-list-task:hover .tudu-task-options{
+    display: block;
+  }
 
