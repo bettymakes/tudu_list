@@ -70,10 +70,20 @@
     float: left;
   }
 
-
   .create-container {
     float: left;
+    padding-left: 20px;
   }
+
+  .tudu-new-task-input{
+    height: 28px;
+    margin: 0;
+    padding: 0 10px;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    outline: 0;
+  }  
 
 /* THE MAIN */
   .main-container {
@@ -121,11 +131,6 @@
     margin-right: 0;
   }
 
-  .tudu-task, .tudu-edit-input {
-    color: #444;
-    font-size: 16px;
-    line-height: 1.2em;
-  }
 
   .tudu-list-task:hover .tudu-task{
     color: black;
