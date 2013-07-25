@@ -15,11 +15,11 @@
         </div>
         <div class="create-container">
         <%= form_for @list, :remote => true do |f| %>
-          <%= f.label :task %>
+          <%#= f.label :task %>
           <%= f.text_field :task, :class => "tudu-new-task-input" %>
 
-          <%= f.label :priority %>
-          <%= f.select :priority, List::PRIORITY %>
+          <%#= f.label :priority %>
+          <%= f.select :priority, List::PRIORITY, :class => "tudu-new-task-priority" %>
 
           <%= f.submit "Create TuDu", :class => "tudu-create-new-btn" %>
         <% end %>
