@@ -176,7 +176,15 @@
   }
 
   .priority-high {
-    box-shadow: 3px 0px 0px orangered inset;
+    box-shadow: 3px 0px 0px orangered inset !important;
+  }
+
+  .create-container {
+    position: fixed;
+    padding: 20px;
+    border-bottom: 3px solid black;
+    width: 100%;
+    background-color: white;
   }
 
 

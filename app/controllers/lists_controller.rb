@@ -44,7 +44,7 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
     @list.destroy
-    render nothing:true
+    render nothing: true
   end
 
   private

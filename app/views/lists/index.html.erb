@@ -1,15 +1,4 @@
-<%= form_for @list, :remote => true do |f| %>
-  <%= f.label :task %>
-  <%= f.text_field :task, :class => "tudu-new-task-input" %>
 
-  <%= f.label :priority %>
-  <%= f.select :priority, List::PRIORITY %>
-
-  <%= f.submit "Create TuDu", :class => "tudu-create-new-btn" %>
-<% end %>
-<br>
-<hr>
-<br>
 <ul class="tudu-list">
   <% @lists.each do |list| %>
     <li class="priority-<%= list.priority.downcase %> tudu-id-<%= list.id %> tudu-list-task">
