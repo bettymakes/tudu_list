@@ -25,6 +25,14 @@ var EditingTasks = function(){
     if(!$(this).parent().parent().hasClass("edit-mode")){
 
       $(".tudu-list-task").removeClass("edit-mode");
+      // $(".tudu-list-task").addClass("hidden");
+      $(".tudu-update").addClass("hidden");
+      $(".tudu-edit").removeClass("hidden");
+      // $(".tudu-list-task").parent().parent().removeClass("edit-mode");
+      // $(".tudu-list-task").parent().parent().find(".tudu-edit-form").addClass("hidden");
+      // $(".tudu-list-task").parent().parent().find(".tudu-task").removeClass("hidden");
+
+
       $(this).parent().parent().addClass("edit-mode");
       $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
       $(this).addClass("hidden");
