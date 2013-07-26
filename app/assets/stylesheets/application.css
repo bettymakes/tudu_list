@@ -183,6 +183,7 @@
     margin-bottom: 10px;
     background: none;
     font-weight: bold;
+    font-size: inherit;
   }
 
   .priority-high {
