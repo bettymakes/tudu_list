@@ -23,6 +23,8 @@ var EditingTasks = function(){
   //Edit Button Action
   $(".tudu-edit").on("click", function(){
     if(!$(this).parent().parent().hasClass("edit-mode")){
+
+      $(".tudu-list-task").removeClass("edit-mode");
       $(this).parent().parent().addClass("edit-mode");
       $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
       $(this).addClass("hidden");
