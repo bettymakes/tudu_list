@@ -81,6 +81,13 @@ var EditingTasks = function(){
     console.log("cancel clicked")
   });
 
+  //Cancel Task on Esc Key Action
+  $(document).on("keydown", function(event){
+    if(event.keyCode == 27){
+      console.log("Esc Pressed");
+    }
+  });
+
 
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
