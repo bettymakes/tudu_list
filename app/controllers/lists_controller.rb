@@ -34,7 +34,8 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update_attributes(list_params)
-    render nothing: true
+    
+    head :ok
     # redirect_to lists_path
     # else
     #   render nothing: true
