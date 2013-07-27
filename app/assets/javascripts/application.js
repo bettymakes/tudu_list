@@ -62,7 +62,7 @@ var EditingTasks = function(){
   });
 
 
-  //Update Button Action
+  //Update Button on Click Action
   $(".tudu-update").on("click", function(){
     $(this).parent().parent().find(".tudu-edit-input").submit();
     $(this).parent().parent().find(".tudu-task").text($(this).parent().parent().find(".tudu-edit-input").val());
@@ -75,6 +75,13 @@ var EditingTasks = function(){
     $(this).parent().parent().removeClass("edit-mode");
 
     console.log("update clicked")
+  });
+
+  //Update Task on Enter Key Action
+  $(".tudu-edit-input").on("keydown", function(event){
+    if(event.keyCode == 13){
+      console.log("Enter Pressed");
+    }
   });
 
   //Delete Button Action
