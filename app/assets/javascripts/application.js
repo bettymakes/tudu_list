@@ -31,6 +31,10 @@ var EditingTasks = function(){
       $(".tudu-task").removeClass("hidden");
       $(".tudu-edit-cancel").addClass("hidden");
 
+      $(".tudu-list-task").each(function(){
+        $(this).find(".tudu-edit-input").val($(this).find(".tudu-task").text());
+      })
+
       $(this).parent().parent().addClass("edit-mode");
       $(this).siblings(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
       $(this).addClass("hidden");
