@@ -17,6 +17,7 @@
 
 $(document).ready(function(){
 
+
 var UpdatingTask = function(element){
   var tuduTask = element.closest(".tudu-list-task");
   tuduTask.find(".tudu-edit-input").submit();
@@ -65,13 +66,17 @@ var EditingTasks = function(){
 
   //Cancel Button Action
   $(".tudu-edit-cancel").on("click", function(){
-    $(this).addClass("hidden");
-    $(this).siblings(".tudu-update").addClass("hidden");
-    $(this).siblings(".tudu-edit").removeClass("hidden");
-    $(this).parent().parent().removeClass("edit-mode");
-    $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
-    $(this).parent().parent().find(".tudu-task").removeClass("hidden");
-    $(this).parent().siblings().find(".tudu-edit-input").val($(this).parent().parent().find(".tudu-task").text());
+    
+    var tuDuTask = $(this).closest(".tudu-list-task");
+    tuDuTask.find(".tudu-edit-cancel").addClass("hidden");
+    tuDuTask.find(".tudu-update").addClass("hidden");
+    tuDuTask.find(".tudu-edit").removeClass("hidden");
+    tuDuTask.removeClass("edit-mode");
+    tuDuTask.find(".tudu-edit-form").addClass("hidden");
+    tuDuTask.find(".tudu-task").removeClass("hidden");
+    tuDuTask.find(".tudu-edit-input").val(tuDuTask.find(".tudu-task").text());
+
+
     console.log("cancel clicked")
   });
 
