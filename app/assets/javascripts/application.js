@@ -17,6 +17,20 @@
 
 $(document).ready(function(){
 
+var UpdatingTask = function(){
+  var tuduTask = $(this).closest(".tudu-list-task");
+  tuduTask.find(".tudu-edit-input").submit();
+  tuduTask.find(".tudu-task").text(tuduTask.find(".tudu-edit-input").val());
+  tuduTask.find(".tudu-edit-form").addClass("hidden");
+  tuduTask.find(".tudu-task").removeClass("hidden");
+  tuduTask.find(".tudu-task").hide().fadeIn(500);
+  tuduTask.find(".tudu-update").addClass("hidden");
+  tuduTask.find(".tudu-edit-cancel").addClass("hidden");
+  tuduTask.find(".tudu-edit").removeClass("hidden");
+  tuduTask.removeClass("edit-mode");
+}
+
+
 var EditingTasks = function(){
 
 //TuDu Edit Task Function
@@ -64,18 +78,7 @@ var EditingTasks = function(){
 
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
-    var tuduTask = $(this).closest(".tudu-list-task");
-
-    tuduTask.find(".tudu-edit-input").submit();
-    tuduTask.find(".tudu-task").text(tuduTask.find(".tudu-edit-input").val());
-    tuduTask.find(".tudu-edit-form").addClass("hidden");
-    tuduTask.find(".tudu-task").removeClass("hidden");
-    tuduTask.find(".tudu-task").hide().fadeIn(500);
-    tuduTask.find(".tudu-update").addClass("hidden");
-    tuduTask.find(".tudu-edit-cancel").addClass("hidden");
-    tuduTask.find(".tudu-edit").removeClass("hidden");
-    tuduTask.removeClass("edit-mode");
-
+    UpdatingTask();
     console.log("update clicked")
   });
 
