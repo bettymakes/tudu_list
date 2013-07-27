@@ -64,15 +64,15 @@ var EditingTasks = function(){
 
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
-    $(this).parent().parent().find(".tudu-edit-input").submit();
-    $(this).parent().parent().find(".tudu-task").text($(this).parent().parent().find(".tudu-edit-input").val());
-    $(this).parent().parent().find(".tudu-edit-form").addClass("hidden");
-    $(this).parent().parent().find(".tudu-task").removeClass("hidden");
-    $(this).parent().parent().find(".tudu-task").hide().fadeIn(500);
+    $(this).closest(".tudu-list-task").find(".tudu-edit-input").submit();
+    $(this).closest(".tudu-list-task").find(".tudu-task").text($(this).closest(".tudu-list-task").find(".tudu-edit-input").val());
+    $(this).closest(".tudu-list-task").find(".tudu-edit-form").addClass("hidden");
+    $(this).closest(".tudu-list-task").find(".tudu-task").removeClass("hidden");
+    $(this).closest(".tudu-list-task").find(".tudu-task").hide().fadeIn(500);
     $(this).addClass("hidden");
     $(this).siblings(".tudu-edit-cancel").addClass("hidden");
     $(this).siblings(".tudu-edit").removeClass("hidden");
-    $(this).parent().parent().removeClass("edit-mode");
+    $(this).closest(".tudu-list-task").removeClass("edit-mode");
 
     console.log("update clicked")
   });
