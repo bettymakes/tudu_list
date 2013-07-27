@@ -17,8 +17,8 @@
 
 $(document).ready(function(){
 
-var UpdatingTask = function(){
-  var tuduTask = $(this).closest(".tudu-list-task");
+var UpdatingTask = function(element){
+  var tuduTask = element.closest(".tudu-list-task");
   tuduTask.find(".tudu-edit-input").submit();
   tuduTask.find(".tudu-task").text(tuduTask.find(".tudu-edit-input").val());
   tuduTask.find(".tudu-edit-form").addClass("hidden");
@@ -78,7 +78,7 @@ var EditingTasks = function(){
 
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
-    UpdatingTask();
+    UpdatingTask($(this));
     console.log("update clicked")
   });
 
