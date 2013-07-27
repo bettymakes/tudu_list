@@ -85,6 +85,7 @@ var EditingTasks = function(){
   //Update Task on Enter Key Action
   $(".tudu-edit-input").on("keydown", function(event){
     if(event.keyCode == 13){
+      UpdatingTask($(this));
       console.log("Enter Pressed");
     }
   });
