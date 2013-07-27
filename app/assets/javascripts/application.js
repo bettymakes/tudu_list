@@ -102,10 +102,11 @@ EditingTasks();
           $(".tudu-list").prepend(item);
           item.find(".tudu-task").hide().fadeIn(500);
           EditingTasks();
+          $(".tudu-new-task-input").val("");
+
         }
       });
     });
-
   });
 });
 
