@@ -64,15 +64,17 @@ var EditingTasks = function(){
 
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
-    $(this).closest(".tudu-list-task").find(".tudu-edit-input").submit();
-    $(this).closest(".tudu-list-task").find(".tudu-task").text($(this).closest(".tudu-list-task").find(".tudu-edit-input").val());
-    $(this).closest(".tudu-list-task").find(".tudu-edit-form").addClass("hidden");
-    $(this).closest(".tudu-list-task").find(".tudu-task").removeClass("hidden");
-    $(this).closest(".tudu-list-task").find(".tudu-task").hide().fadeIn(500);
+    var tuduTask = $(this).closest(".tudu-list-task");
+    
+    tuduTask.find(".tudu-edit-input").submit();
+    tuduTask.find(".tudu-task").text(tuduTask.find(".tudu-edit-input").val());
+    tuduTask.find(".tudu-edit-form").addClass("hidden");
+    tuduTask.find(".tudu-task").removeClass("hidden");
+    tuduTask.find(".tudu-task").hide().fadeIn(500);
     $(this).addClass("hidden");
     $(this).siblings(".tudu-edit-cancel").addClass("hidden");
     $(this).siblings(".tudu-edit").removeClass("hidden");
-    $(this).closest(".tudu-list-task").removeClass("edit-mode");
+    tuduTask.removeClass("edit-mode");
 
     console.log("update clicked")
   });
