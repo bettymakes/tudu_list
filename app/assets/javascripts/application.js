@@ -77,7 +77,7 @@ var EditingTasks = function(){
 
   //Cancel Button Action
   $(".tudu-edit-cancel").on("click", function(){
-
+    CancellingTask($(this));
     console.log("cancel clicked")
   });
 
