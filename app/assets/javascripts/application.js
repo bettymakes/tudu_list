@@ -16,6 +16,9 @@
 //= require_tree .
 
 $(document).ready(function(){
+
+$(".tudu-list").sortable();
+
 var EditingTask = function(element){
   var tuDuTask = element.closest(".tudu-list-task");
   if(!tuDuTask.hasClass("edit-mode")){
