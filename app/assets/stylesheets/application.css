@@ -105,6 +105,7 @@
     border-bottom: 1px solid #eee;
     display: block;
     padding: 20px;
+    background-color: white;
   }
 
   .tudu-list li.tudu-list-task:hover{
@@ -191,8 +192,13 @@
   }
 
 /* THE TUDU LIST INTERACTION */
-  .ui-sortable-helper{
+  .tudu-list li.tudu-list-task.ui-sortable-helper {
     cursor: move;
+    background: gray;
   }
 
+  .tudu-list li.tudu-list-task.ui-sortable-placeholder {
+    background: red !important;
+    visibility: visible !important;
+  }
 
