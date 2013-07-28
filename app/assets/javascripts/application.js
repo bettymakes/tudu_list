@@ -16,7 +16,28 @@
 //= require_tree .
 
 $(document).ready(function(){
+var EditingTask = function(element){
+  var tuDuTask = element.closest(".tudu-list-task");
+  if(!tuDuTask.hasClass("edit-mode")){
 
+    $(".tudu-list-task").removeClass("edit-mode");
+    $(".tudu-update").addClass("hidden");
+    $(".tudu-edit").removeClass("hidden");
+    $(".tudu-edit-form").addClass("hidden");
+    $(".tudu-task").removeClass("hidden");
+    $(".tudu-edit-cancel").addClass("hidden");
+
+    $(".tudu-list-task").each(function(){
+      $(this).find(".tudu-edit-input").val($(this).find(".tudu-task").text());
+    })
+
+    tuDuTask.addClass("edit-mode");
+    tuDuTask.find(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
+    tuDuTask.find(".tudu-edit").addClass("hidden");
+    tuDuTask.find(".tudu-task").addClass("hidden");
+    tuDuTask.find(".tudu-edit-form").removeClass("hidden");
+  }
+}
 
 var UpdatingTask = function(element){
   var tuduTask = element.closest(".tudu-list-task");
@@ -48,27 +69,8 @@ var EditingTasks = function(){
 //TuDu Edit Task Function
   //Edit Button Action
   $(".tudu-edit").on("click", function(){
-    var tuDuTask = $(this).closest(".tudu-list-task");
-    if(!tuDuTask.hasClass("edit-mode")){
-
-      $(".tudu-list-task").removeClass("edit-mode");
-      $(".tudu-update").addClass("hidden");
-      $(".tudu-edit").removeClass("hidden");
-      $(".tudu-edit-form").addClass("hidden");
-      $(".tudu-task").removeClass("hidden");
-      $(".tudu-edit-cancel").addClass("hidden");
-
-      $(".tudu-list-task").each(function(){
-        $(this).find(".tudu-edit-input").val($(this).find(".tudu-task").text());
-      })
-
-      tuDuTask.addClass("edit-mode");
-      tuDuTask.find(".tudu-update, .tudu-edit-cancel").removeClass("hidden");
-      tuDuTask.find(".tudu-edit").addClass("hidden");
-      tuDuTask.find(".tudu-task").addClass("hidden");
-      tuDuTask.find(".tudu-edit-form").removeClass("hidden");
-      console.log("clicked");
-    }
+    EditingTask($(this));
+    console.log("clicked");
     // else{
     //   $(this).parent().parent().removeClass("edit-mode");
     //   console.log("removed")
