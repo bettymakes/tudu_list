@@ -66,7 +66,7 @@ var EditingTasks = function(){
       $(this).addClass("hidden");
       $(this).parent().parent().find(".tudu-task").addClass("hidden");
       $(this).parent().parent().find(".tudu-edit-form").removeClass("hidden");
-      console.log("clicked")
+      console.log("clicked");
     }
     // else{
     //   $(this).parent().parent().removeClass("edit-mode");
@@ -74,11 +74,16 @@ var EditingTasks = function(){
     // }
   });
 
+  //Double Click on Task to Edit Action
+  $(".tudu-list-task").on("dblclick", function(){
+    console.log("double clicked");
+  });
+
 
   //Cancel Button Action
   $(".tudu-edit-cancel").on("click", function(){
     CancellingTask($(this));
-    console.log("cancel clicked")
+    console.log("cancel clicked");
   });
 
   //Cancel Task on Esc Key Action
@@ -95,7 +100,7 @@ var EditingTasks = function(){
   //Update Button on Click Action
   $(".tudu-update").on("click", function(){
     UpdatingTask($(this));
-    console.log("update clicked")
+    console.log("update clicked");
   });
 
   //Update Task on Enter Key Action
