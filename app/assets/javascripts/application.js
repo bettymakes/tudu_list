@@ -79,6 +79,7 @@ var EditingTasks = function(){
 
   //Double Click on Task to Edit Action
   $(".tudu-list-task").on("dblclick", function(){
+    EditingTask($(this));
     console.log("double clicked");
   });
 
