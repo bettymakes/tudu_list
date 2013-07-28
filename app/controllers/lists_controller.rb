@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.find(:all, :order => "id DESC")
+    @lists = List.find(:all, :order => "order_num DESC")
     @list = List.new
     
     respond_to do |format|
@@ -52,7 +52,8 @@ class ListsController < ApplicationController
     def list_params
       params.require(:list).permit(
         :task,
-        :priority
+        :priority,
+        :order_num
       )
     end
 
