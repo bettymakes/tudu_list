@@ -9,7 +9,7 @@
             <%= f.text_field :task, :class => "tudu-edit-input" %>
           <% end %>
         </div>
-        <div class="tudu-order-form">
+        <div class="tudu-order-form hidden">
           <%= form_for list, :remote => true do |f| %>
             <%= f.text_field :order_num, :class => "tudu-order-input" %>
           <% end %>

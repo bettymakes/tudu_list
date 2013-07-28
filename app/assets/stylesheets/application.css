@@ -194,11 +194,11 @@
 /* THE TUDU LIST INTERACTION */
   .tudu-list li.tudu-list-task.ui-sortable-helper {
     cursor: move;
-    background: gray;
+    opacity: 0.75;
   }
 
   .tudu-list li.tudu-list-task.ui-sortable-placeholder {
-    background: red !important;
+    background: #f8ffef !important;
     visibility: visible !important;
   }
 
