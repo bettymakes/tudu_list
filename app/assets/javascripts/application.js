@@ -17,7 +17,11 @@
 
 $(document).ready(function(){
 
-$(".tudu-list").sortable();
+$(".tudu-list").sortable({
+  start: function(e, ui){
+    ui.placeholder.height(ui.item.height());
+  }
+});
 
 var EditingTask = function(element){
   var tuDuTask = element.closest(".tudu-list-task");
