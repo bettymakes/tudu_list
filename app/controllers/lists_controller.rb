@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all.reverse
+    @lists = List.find(:all, :order => "id DESC")
     @list = List.new
     
     respond_to do |format|
