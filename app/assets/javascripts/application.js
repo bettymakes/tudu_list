@@ -26,6 +26,7 @@ $(".tudu-list").sortable({
 $(".tudu-list").on("sortstop", function(e, ui){
   $(".tudu-list-task").each(function(){
     var index = $(this).index()+1;
+    $(this).find(".tudu-order-input").val(index);
     console.log("stopped sortable" + index);
   });
 });
