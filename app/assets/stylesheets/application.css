@@ -190,6 +190,9 @@
     box-shadow: 3px 0px 0px orangered inset !important;
   }
 
-
+/* THE TUDU LIST INTERACTION */
+  .ui-sortable-helper{
+    cursor: move;
+  }
 
 
