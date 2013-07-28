@@ -84,7 +84,10 @@ var EditingTasks = function(){
   //Cancel Task on Esc Key Action
   $(document).on("keydown", function(event){
     if(event.keyCode == 27){
-      console.log("Esc Pressed");
+      $(".edit-mode").each(function(){
+        CancellingTask($(this));
+        console.log("Esc Pressed");
+      });
     }
   });
 
