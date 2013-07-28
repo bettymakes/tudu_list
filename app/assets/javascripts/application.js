@@ -23,6 +23,10 @@ $(".tudu-list").sortable({
   }
 });
 
+$(".tudu-list").on("sortstop", function(e, ui){
+  console.log("stopped sortable")
+});
+
 var EditingTask = function(element){
   var tuDuTask = element.closest(".tudu-list-task");
   if(!tuDuTask.hasClass("edit-mode")){
