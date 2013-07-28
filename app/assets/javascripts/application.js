@@ -24,7 +24,10 @@ $(".tudu-list").sortable({
 });
 
 $(".tudu-list").on("sortstop", function(e, ui){
-  console.log("stopped sortable")
+  $(".tudu-list-task").each(function(){
+    var index = $(this).index()+1;
+    console.log("stopped sortable" + index);
+  });
 });
 
 var EditingTask = function(element){
