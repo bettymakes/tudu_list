@@ -1,5 +1,5 @@
 <ul class="tudu-list">
-  <li class="priority-<%= @list.priority.downcase %> tudu-id-<%= @list.id %> tudu-list-task">
+  <li class="priority-<%= @list.priority.downcase %> tudu-id-<%= @list.id %> tudu-list-task" data-task-id="<%= @list.id %>">
     <div class="tudu-task-container">
       <div class="tudu-task"><%= @list.task %></div>
       <div class="tudu-edit-form hidden">

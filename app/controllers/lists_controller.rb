@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all.order("id DESC")
+    @lists = List.all.order("order_num ASC")
     @list = List.new
     
     respond_to do |format|
