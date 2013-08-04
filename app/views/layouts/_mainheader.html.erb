@@ -2,9 +2,9 @@
       <div class="header-container">
         <div class="logo">
           <h1>TuDu</h1>
-          <%= link_to "Log Out", session_path(current_user), :method => :delete %>
         </div>
-        <%#= render "layouts/createcontainer" %>
+        <%= render "layouts/createcontainer" if params[:controller] == 'lists' %>
       </div>
+      <%= link_to "Log Out", session_path(current_user), :method => :delete %>
       </div>
     </div>
