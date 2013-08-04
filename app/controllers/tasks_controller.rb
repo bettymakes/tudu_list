@@ -51,7 +51,7 @@ class TasksController < ApplicationController
   private
     def task_params
       params.require(:task).permit(
-        !!:task,!!
+        :item,
         :priority,
         :order_num
       )
