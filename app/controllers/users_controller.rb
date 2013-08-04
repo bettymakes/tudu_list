@@ -14,6 +14,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.new(user_params)
+    @user.destroy
+    redirect_to root_path, notice: "User Deleted"
   end
 
   private
