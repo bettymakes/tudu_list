@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130728025354) do
+ActiveRecord::Schema.define(version: 20130802233055) do
 
   create_table "lists", force: true do |t|
     t.string   "task"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20130728025354) do
     t.datetime "updated_at"
     t.string   "priority"
     t.integer  "order_num"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
