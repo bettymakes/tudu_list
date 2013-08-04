@@ -4,5 +4,5 @@ TuduList::Application.routes.draw do
   resources :lists
   resources :sessions
 
-  root to: 'users#new' 
+  root to: 'sessions#new' 
 end
