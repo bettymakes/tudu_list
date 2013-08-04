@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = login(params[:email], params[:password])
     if user
-      redirect_to lists_path
+      redirect_to tasks_path
     else
       flash.now.alert = "Email or password was invalid. Please try again."
       render :new
