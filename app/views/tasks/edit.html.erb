@@ -1,0 +1,13 @@
+<h3>Edit</h3>
+<%= form_for @task do |f| %>
+
+#need to update ':task' to ':item' with changes to be made with next migration
+  <%= f.label #:task %>  
+  <%= f.text_field #:task %> 
+
+  <%= f.label :priority %>
+  <%= f.select :priority, Task::PRIORITY %>
+
+  <%= f.submit "Update TuDu" %>
+
+<% end %>
