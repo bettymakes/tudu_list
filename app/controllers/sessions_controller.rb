@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def show
+  def create
   end
 
   def destroy
