@@ -30,10 +30,10 @@ var SortingTask = function() {
       var id = $(this).data("task-id");
       var array = "order_num: " + index;
       $.ajax({
-        url: "/lists/" + id,
+        url: "/tasks/" + id,
         type: "POST",
         dataType: JSON,
-        data: { _method: "patch", "list[order_num]" : index }
+        data: { _method: "patch", "task[order_num]" : index }
       });
     });
   });
@@ -154,12 +154,12 @@ EditingTasks();
 
   //TuDu Adding New Task
   $("#new_list").bind("ajax:complete", function(){
-    var jsonUrl = "/lists.json";
+    var jsonUrl = "/tasks.json";
     // Getting JSON to get the id of the newest task added
       $.getJSON(jsonUrl, function(data){
         console.log(data[0].id);
       $.ajax({
-        url: "/lists/"+data[0].id,
+        url: "/tasks/"+data[0].id,
         context: document.body,
         success: function(ajaxDataDocBody) {
           var item = $(ajaxDataDocBody).find(".tudu-list-task");
