@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to tasks_path
+      redirect_to lists_path
     else
       render :new
     end
