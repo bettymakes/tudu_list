@@ -1,7 +1,7 @@
 <h3>New</h3>
 <%= form_for @task do |f| %>
-  <%= f.label !!:task!! %>
-  <%= f.text_field !!:task!! %>
+  <%= f.label :item %>
+  <%= f.text_field :item %>
 
   <%= f.label :priority %>
   <%= f.select :priority, Task::PRIORITY %>

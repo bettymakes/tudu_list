@@ -1,12 +1,12 @@
 
 
 <ul class="tudu-list">
-  <li class="priority-<%= @task.priority.downcase %> tudu-id-<%= @task.id %> tudu-list-!!task!!" data-task-id="<%= @task.id %>">
+  <li class="priority-<%= @task.priority.downcase %> tudu-id-<%= @task.id %> tudu-list-task" data-task-id="<%= @task.id %>">
     <div class="tudu-task-container">
-      <div class="tudu-task"><%= @task.!!task!! %></div>
+      <div class="tudu-task"><%= @task.item %></div>
       <div class="tudu-edit-form hidden">
         <%= form_for @task, :remote => true do |f| %>
-        <%= f.text_field !!:task!!, :class => "tudu-edit-input" %>
+        <%= f.text_field :item, :class => "tudu-edit-input" %>
         <% end %>
       </div>
     </div>
