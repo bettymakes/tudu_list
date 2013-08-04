@@ -1,10 +1,10 @@
 <div class="create-container">
 <%= form_for @list, :remote => true do |f| %>
   <%#= f.label :task %>
-  <%= f.text_field !!:task!!, :class => "tudu-new-task-input" %>
+  <%= f.text_field :task, :class => "tudu-new-task-input" %>
 
   <%#= f.label :priority %>
-  <%= f.select :priority, Task::PRIORITY %>
+  <%= f.select :priority, List::PRIORITY %>
 
   <%= f.submit "+", :class => "tudu-create-new-btn" %>
 <% end %>
