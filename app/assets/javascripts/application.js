@@ -23,22 +23,17 @@ $(".tudu-list").sortable({
   }
 });
 
-var SortingTask = function() {
-  $(".tudu-list").on("sortstop", function(e, ui){
-    $(".tudu-list-task").each(function(){
-      var index = $(this).index()+1;
-      var id = $(this).data("task-id");
-      var array = "order_num: " + index;
-      $.ajax({
-        url: "/lists/" + id,
-        type: "POST",
-        dataType: JSON,
-        data: { _method: "patch", "list[order_num]" : index }
-      });
-    });
+var orderSorted = function(){
+  $(".tudu-list-task").each(function(){
+    var index = $(this).index()+1;
+    $(this).find(".tudu-order-input").val(index).submit();
+    console.log("stopped sortable" + index);
   });
 }
-SortingTask();
+
+$(".tudu-list").on("sortstop", function(e, ui){
+  orderSorted();
+});
 
 var EditingTask = function(element){
   var tuDuTask = element.closest(".tudu-list-task");
@@ -167,6 +162,7 @@ EditingTasks();
           item.find(".tudu-task").hide().fadeIn(500);
           EditingTasks();
           $(".tudu-new-task-input").val("");
+          orderSorted();
 
         }
       });
